@@ -1,8 +1,7 @@
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import tailwindcss from "@tailwindcss/vite";
-import react, { reactCompilerPreset } from "@vitejs/plugin-react";
-import babel from "@rolldown/plugin-babel";
+import react from "@vitejs/plugin-react";
 import { VitePWA } from "vite-plugin-pwa";
 
 const appName = "Karito Centro Estetico";
@@ -18,8 +17,11 @@ export default defineConfig({
   },
   plugins: [
     tailwindcss(),
-    react(),
-    babel({ presets: [reactCompilerPreset()] }),
+    react({
+      babel: {
+        plugins: ["babel-plugin-react-compiler"],
+      },
+    }),
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: false,
