@@ -160,6 +160,9 @@ Referencia adicional: [src/assets/images/README.md](/home/puma/projects/Web_Kari
 Usa [.env.example](/home/puma/projects/Web_KaritoCentroEstetico/.env.example:1) como base.
 
 ```env
+# Dominio publico usado para canonical, Open Graph y Twitter Cards.
+VITE_SITE_URL=https://tu-dominio.com
+
 # Entrega publica de imagenes. Vite expone estas variables al navegador.
 VITE_CLOUDINARY_CLOUD_NAME=
 VITE_CLOUDINARY_BASE_FOLDER=
@@ -178,6 +181,8 @@ CLOUDINARY_LOCAL_MAX_DIMENSION=1920
 CLOUDINARY_LOCAL_JPEG_QUALITY=82
 CLOUDINARY_LOCAL_WEBP_QUALITY=78
 ```
+
+Configura tambien `VITE_SITE_URL` con tu dominio publico en las variables de entorno del proyecto en Vercel para que el build genere URLs absolutas en Open Graph.
 
 ### Variables clave
 
@@ -230,6 +235,7 @@ npm run build
 - Si agregas o renombras rutas, revisa [src/app/App.jsx](/home/puma/projects/Web_KaritoCentroEstetico/src/app/App.jsx:1).
 - Si agregas servicios nuevos, actualiza [src/data/serviceCatalog.js](/home/puma/projects/Web_KaritoCentroEstetico/src/data/serviceCatalog.js:1).
 - Si cambias textos generales, revisa [src/data/site.js](/home/puma/projects/Web_KaritoCentroEstetico/src/data/site.js:1) y [src/data/site.en.js](/home/puma/projects/Web_KaritoCentroEstetico/src/data/site.en.js:1).
+- Si cambias el dominio publico o los metadatos SEO, revisa [src/data/seo.js](/home/puma/projects/Web_KaritoCentroEstetico/src/data/seo.js:1).
 - Si cambias imagenes, revisa [src/assets/images/index.js](/home/puma/projects/Web_KaritoCentroEstetico/src/assets/images/index.js:1) y la estructura de `src/assets/images`.
 - La PWA evita precachear imagenes de contenido para que los reemplazos visuales aparezcan mas rapido.
 

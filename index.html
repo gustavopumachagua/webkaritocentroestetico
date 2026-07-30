@@ -1,25 +1,23 @@
 <!doctype html>
-<html lang="es-PE">
+<html lang="%KARITO_SEO_LANG%">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Karito Centro Estético | Medicina Estética Facial y Corporal en Los Olivos
-    </title>
+    <title>%KARITO_SEO_TITLE%</title>
     <meta
       name="description"
-      content="Karito Centro Estético ofrece limpiezas faciales, tratamientos faciales y corporales con atención personalizada, tecnología moderna y resultados visibles en Los Olivos, Lima."
+      content="%KARITO_SEO_DESCRIPTION%"
     />
     <meta
       name="keywords"
-      content="Karito Centro Estético, centro estético, medicina estética, limpiezas faciales, tratamientos faciales, tratamientos corporales, Los Olivos, Lima"
+      content="%KARITO_SEO_KEYWORDS%"
     />
-    <meta name="author" content="Karito Centro Estético" />
+    <meta name="author" content="%KARITO_SEO_AUTHOR%" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#05070a" />
     <meta name="color-scheme" content="dark" />
-    <meta name="application-name" content="Karito Centro Estético" />
+    <meta name="application-name" content="%KARITO_SEO_APPLICATION_NAME%" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Karito" />
     <meta
@@ -29,111 +27,58 @@
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
 
+    <link rel="canonical" href="%KARITO_CANONICAL_URL%" />
     <link rel="shortcut icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
-    <meta property="og:locale" content="es_PE" />
+    <meta property="og:locale" content="%KARITO_SEO_OG_LOCALE%" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Karito Centro Estético" />
+    <meta property="og:url" content="%KARITO_CANONICAL_URL%" />
+    <meta property="og:site_name" content="%KARITO_SEO_SITE_NAME%" />
     <meta
       property="og:title"
-      content="Karito Centro Estético | Medicina Estética Facial y Corporal en Los Olivos"
+      content="%KARITO_SEO_TITLE%"
     />
     <meta
       property="og:description"
-      content="Limpiezas faciales, tratamientos faciales y corporales con atención cercana, tecnología moderna y bienestar en cada cita."
+      content="%KARITO_SEO_DESCRIPTION%"
     />
-    <meta property="og:image" content="/imagen_principal.png" />
+    <meta
+      property="og:image"
+      content="%KARITO_OG_IMAGE_URL%"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="%KARITO_OG_IMAGE_URL%"
+    />
+    <meta property="og:image:type" content="%KARITO_SEO_IMAGE_TYPE%" />
     <meta
       property="og:image:alt"
-      content="Karito Centro Estético, medicina estética facial y corporal"
+      content="%KARITO_SEO_IMAGE_ALT%"
     />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:image:width" content="%KARITO_SEO_IMAGE_WIDTH%" />
+    <meta property="og:image:height" content="%KARITO_SEO_IMAGE_HEIGHT%" />
 
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="%KARITO_CANONICAL_URL%" />
     <meta
       name="twitter:title"
-      content="Karito Centro Estético | Medicina Estética Facial y Corporal en Los Olivos"
+      content="%KARITO_SEO_TITLE%"
     />
     <meta
       name="twitter:description"
-      content="Limpiezas faciales, tratamientos faciales y corporales con atención cercana, tecnología moderna y bienestar en cada cita."
+      content="%KARITO_SEO_DESCRIPTION%"
     />
-    <meta name="twitter:image" content="/imagen_principal" />
-    <script>
-      (function () {
-        var locale = "es";
-
-        try {
-          locale =
-            window.localStorage.getItem("karito-locale") === "en" ? "en" : "es";
-        } catch (error) {
-          locale = "es";
-        }
-
-        var contentByLocale = {
-          es: {
-            lang: "es-PE",
-            title:
-              "Karito Centro Estético | Medicina Estética Facial y Corporal en Los Olivos",
-            description:
-              "Karito Centro Estético ofrece limpiezas faciales, tratamientos faciales y corporales con atención personalizada, tecnología moderna y resultados visibles en Los Olivos, Lima.",
-            keywords:
-              "Karito Centro Estético, centro estético, medicina estética, limpiezas faciales, tratamientos faciales, tratamientos corporales, Los Olivos, Lima",
-            author: "Karito Centro Estético",
-            applicationName: "Karito Centro Estético",
-            siteName: "Karito Centro Estético",
-            ogLocale: "es_PE",
-            imageAlt:
-              "Karito Centro Estético, medicina estética facial y corporal",
-          },
-          en: {
-            lang: "en",
-            title:
-              "Karito Aesthetic Center | Facial and Body Aesthetic Medicine in Los Olivos",
-            description:
-              "Karito Aesthetic Center offers facial cleanses, facial treatments, and body treatments with personalized care, modern technology, and visible results in Los Olivos, Lima.",
-            keywords:
-              "Karito Aesthetic Center, aesthetic center, aesthetic medicine, facial cleanses, facial treatments, body treatments, Los Olivos, Lima",
-            author: "Karito Aesthetic Center",
-            applicationName: "Karito Aesthetic Center",
-            siteName: "Karito Aesthetic Center",
-            ogLocale: "en_US",
-            imageAlt:
-              "Karito Aesthetic Center, facial and body aesthetic medicine",
-          },
-        };
-        var currentContent = contentByLocale[locale] || contentByLocale.es;
-
-        function setMeta(selector, content) {
-          var element = document.querySelector(selector);
-
-          if (element && content) {
-            element.setAttribute("content", content);
-          }
-        }
-
-        document.documentElement.lang = currentContent.lang;
-        document.title = currentContent.title;
-        setMeta('meta[name="description"]', currentContent.description);
-        setMeta('meta[name="keywords"]', currentContent.keywords);
-        setMeta('meta[name="author"]', currentContent.author);
-        setMeta(
-          'meta[name="application-name"]',
-          currentContent.applicationName,
-        );
-        setMeta('meta[property="og:locale"]', currentContent.ogLocale);
-        setMeta('meta[property="og:site_name"]', currentContent.siteName);
-        setMeta('meta[property="og:title"]', currentContent.title);
-        setMeta('meta[property="og:description"]', currentContent.description);
-        setMeta('meta[property="og:image:alt"]', currentContent.imageAlt);
-        setMeta('meta[name="twitter:title"]', currentContent.title);
-        setMeta('meta[name="twitter:description"]', currentContent.description);
-      })();
-    </script>
+    <meta
+      name="twitter:image"
+      content="%KARITO_OG_IMAGE_URL%"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="%KARITO_SEO_IMAGE_ALT%"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
